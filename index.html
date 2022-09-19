@@ -15,15 +15,47 @@
     }
     textarea {
         width: 100%;
+        max-width: 100%;
         min-height: 200px;
     }
+    button {
+        padding: 5px 10px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;
+        border-radius: 10px;
+        display: block;
+        border: 0;
+        font-weight: 700;
+        box-shadow: 0 0 14px -7px #f0194b;
+        background-image: linear-gradient(45deg, #ff512f 0%, #f0194b 51%, #ff512f 100%);
+        cursor: pointer;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        margin-bottom: 10px;
+    }
+    button:active {
+        transform: scale(0.97);
+    }
+    button:hover {
+        background-image: linear-gradient(45deg, #2d9f0e 0%, #19def0 51%, #2d9f0e 100%);
+        background-position: right center;
+        color: #fff;
+        text-decoration: none;
+    }
+
 </style>
 
 <label>
-    <input type="text" id="search" placeholder="Какая буква?">
+    <input type="text" id="search" placeholder="Какую букву ищем?"> Строчная или заглавная имеет значение! И желательно сохранять адекватные пробелы!
 </label>
 
 <p>Ввод:</p>
+<br>
+<button id="example">Пример текста</button>
 
 <label>
     <textarea id="input" placeholder="Текст">
@@ -33,8 +65,9 @@
 <label>
 
 </label>
+
 <br>
-<button id="btn">Форматируем</button>
+<button id="btn">Начинаем поиск</button>
 
 <p>Вывод:</p>
 
@@ -48,6 +81,11 @@
     const input = document.querySelector('#input');
     const output = document.querySelector('#output');
     const search = document.querySelector('#search');
+    const exampleBtn = document.querySelector('#example')
+
+    exampleBtn.addEventListener('click', (ev) => {
+        input.value = example;
+    });
 
     btn.addEventListener('click', (ev) => {
         let text = input.value;
@@ -60,7 +98,14 @@
         output.value = arrText.filter(word => regex.test(word));
     });
 
+    const example = `Слова с "ня" из 7 букв (100 слов):
+  гонящий гордыня горшеня графиня гунявый густняк деревня десятня добрыня донятый доснять жаровня жердняк завозня занятая занятие занятий занятое занятой занятом занятую занятые занятый западня заснять зрельня ивнячок излишня изложня инокиня келарня клешням клешнях княгиня княжата княжить князька князьке князьки князьку кожевня конюшня копотня кофейня кумирня кухнями леденят линялый линяние льнянка льняной малышня манящий нагоняй наивняк нанятый наснять неровня нянечка нянчить нянькин нянюшка обгонят обменяй обонять овчарня олешняк ольшняк осенять особняк отгонят отнятие отнятый отснять очерняй парняга пекарня пенящий печатня пленять плитняк поварня поднять полудня понятие понятно понятое понятой понятою понятый порешня принять пронять прутняк пустыня пчельня пятерня равнять разнять ранящий
 
+ Слова с "ня" из 7 букв (58 слов):
+  ребятня ремнями ровнять розняла руготня святыня сгонять сегодня синячок скорняк слепняк сливняк слизняк слинять слонять сменять снявший сняться сотняга спальня сплетня спорыня ставням ставнях степняк стряпня сухарня сходням сходнях таможня тканями токарня топотня увальня угонять унявший уняться уровняй утонять учинять уяснять фонящий хвастня хохотня ценящий часовня черешня чернядь чинящий швальня шепотня шоферня шпынять штольня щенячий щетинят ягнятки ягнячий
+
+ Слова с "ня" из 8 букв (42 слова):
+  афинянин афинянка афинянке афинянки афинянок барышням барышнях бедняжка беднякам бедняках бедняков беднячек беднячка беднячке беднячки белильня березняк бесенята болтовня бондарня бормотня боярышня бранящий бубнящий буянящий валяльня веснянка визготня волнянка вонявший воняющий воркотня втеснять выгонять вылинять выменять выяснять глиняный гончарня гонявший гоняемый гоняться`;
 
 
 
