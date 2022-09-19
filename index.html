@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<style>
+    body {
+        background: rgba(10, 100, 235, 0.58);
+    }
+    textarea {
+        width: 100%;
+        min-height: 200px;
+    }
+</style>
+
+<label>
+    <input type="text" id="search" placeholder="Какая буква?">
+</label>
+
+<p>Ввод:</p>
+
+<label>
+    <textarea id="input" placeholder="Текст">
+</textarea>
+</label>
+
+<label>
+
+</label>
+<br>
+<button id="btn">Форматируем</button>
+
+<p>Вывод:</p>
+
+<label>
+    <textarea id="output" placeholder="Текст">
+</textarea>
+</label>
+
+<script>
+    const btn = document.querySelector('#btn');
+    const input = document.querySelector('#input');
+    const output = document.querySelector('#output');
+    const search = document.querySelector('#search');
+
+    btn.addEventListener('click', (ev) => {
+        let text = input.value;
+        let searchText = search.value;
+
+        let arrText = text.split(' ');
+
+        const regex = new RegExp(`${searchText}`);
+
+        output.value = arrText.filter(word => regex.test(word));
+    });
+
+
+
+
+
+</script>
+</body>
+</html>
