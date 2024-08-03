@@ -160,7 +160,7 @@
     "src": "images/vite.svg"
   },
   "index.css": {
-    "file": "textFilter/assets/css/index-c190fc3e.css",
+    "file": "textFilter/assets/css/index-9699d255.css",
     "src": "index.css"
   },
   "index.html": {
@@ -181,9 +181,9 @@
       "textFilter/assets/fonts/CoFoSans-Black-e6467a2d.eot"
     ],
     "css": [
-      "textFilter/assets/css/index-c190fc3e.css"
+      "textFilter/assets/css/index-9699d255.css"
     ],
-    "file": "textFilter/assets/js/index-f338cd2a.js",
+    "file": "textFilter/assets/js/index-a268428e.js",
     "isEntry": true,
     "src": "index.html"
   },
