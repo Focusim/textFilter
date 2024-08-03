@@ -1,112 +1,25 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" href="/assets/images/vite-194ce6ae.svg">
+    <title>Буба</title>
+    
+    
+  <script type="module" crossorigin src="/assets/js/index-c722aa5c.js"></script>
+  <link rel="stylesheet" href="/assets/css/index-5b7ebff4.css">
 </head>
-<body>
 
-<style>
-    body {
-        background: rgba(10, 100, 235, 0.58);
-    }
-    textarea {
-        width: 100%;
-        max-width: 100%;
-        min-height: 200px;
-    }
-    button {
-        padding: 5px 10px;
-        text-align: center;
-        text-transform: uppercase;
-        transition: 0.5s;
-        background-size: 200% auto;
-        color: white;
-        border-radius: 10px;
-        display: block;
-        border: 0;
-        font-weight: 700;
-        box-shadow: 0 0 14px -7px #f0194b;
-        background-image: linear-gradient(45deg, #ff512f 0%, #f0194b 51%, #ff512f 100%);
-        cursor: pointer;
-        user-select: none;
-        -webkit-user-select: none;
-        touch-action: manipulation;
-        margin-bottom: 10px;
-    }
-    button:active {
-        transform: scale(0.97);
-    }
-    button:hover {
-        background-image: linear-gradient(45deg, #2d9f0e 0%, #19def0 51%, #2d9f0e 100%);
-        background-position: right center;
-        color: #fff;
-        text-decoration: none;
-    }
+<body style="background-image: url(/assets/images/bg-b6ad9ed6.jpg)">
+<section>
+    <div class="container">
+        <h1>Буба</h1>
+    </div>
 
-</style>
-
-<label>
-    <input type="text" id="search" placeholder="Какую букву ищем?"> Строчная или заглавная имеет значение! И желательно сохранять адекватные пробелы!
-</label>
-
-<p>Ввод:</p>
-<br>
-<button id="example">Пример текста</button>
-
-<label>
-    <textarea id="input" placeholder="Текст">
-</textarea>
-</label>
-
-<label>
-
-</label>
-
-<br>
-<button id="btn">Начинаем поиск</button>
-
-<p>Вывод:</p>
-<p id="outLength"></p>
-
-<label>
-    <textarea id="output" placeholder="Текст">
-</textarea>
-</label>
-
-
-<script>
-    
-    const btn = document.querySelector('#btn');
-    const input = document.querySelector('#input');
-    const output = document.querySelector('#output');
-    const search = document.querySelector('#search');
-    const exampleBtn = document.querySelector('#example')
-    const outLength = document.querySelector('#outLength')
-
-
-    exampleBtn.addEventListener('click', (ev) => {
-        input.value = example;
-    });
-
-    btn.addEventListener('click', (ev) => {
-        let text = input.value;
-        let searchText = search.value;
-
-        let arrText = text.split(' ');
-
-        const regex = new RegExp(`${searchText}`);
-
-        output.value = arrText.filter(word => regex.test(word));
-
-        outLength.innerHTML = 'Найдено ' + arrText.filter(word => regex.test(word)).length + 'слов(а)';
-    });
-
-    const example = `гонящий гордыня горшеня графиня гунявый густняк деревня десятня добрыня донятый доснять жаровня жердняк завозня занятая занятие занятий занятое занятой занятом занятую занятые занятый западня заснять зрельня ивнячок излишня изложня инокиня келарня клешням клешнях княгиня княжата княжить князька князьке князьки князьку кожевня конюшня копотня кофейня кумирня кухнями леденят линялый линяние льнянка льняной малышня манящий нагоняй наивняк нанятый наснять неровня нянечка нянчить нянькин нянюшка обгонят обменяй обонять овчарня олешняк ольшняк осенять особняк отгонят отнятие отнятый отснять очерняй парняга пекарня пенящий печатня пленять плитняк поварня поднять полудня понятие понятно понятое понятой понятою понятый порешня принять пронять прутняк пустыня пчельня пятерня равнять разнять ранящий ребятня ремнями ровнять розняла руготня святыня сгонять сегодня синячок скорняк слепняк сливняк слизняк слинять слонять сменять снявший сняться сотняга спальня сплетня спорыня ставням ставнях степняк стряпня сухарня сходням сходнях таможня тканями токарня топотня увальня угонять унявший уняться уровняй утонять учинять уяснять фонящий хвастня хохотня ценящий часовня черешня чернядь чинящий швальня шепотня шоферня шпынять штольня щенячий щетинят ягнятки ягнячий афинянин афинянка афинянке афинянки афинянок барышням барышнях бедняжка беднякам бедняках бедняков беднячек беднячка беднячке беднячки белильня березняк бесенята болтовня бондарня бормотня боярышня бранящий бубнящий буянящий валяльня веснянка визготня волнянка вонявший воняющий воркотня втеснять выгонять вылинять выменять выяснять глиняный гончарня гонявший гоняемый гоняться`;
-    
-</script>
+    <div class="container">
+        <div id="template-vue"></div>
+    </div>
+</section>
 </body>
 </html>
